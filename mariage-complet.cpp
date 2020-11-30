@@ -191,16 +191,14 @@ int main()
     testSomme();
     testMoyenne();
     testIndiceMax();
+    vector<int> tab_mariage_annee = litTableauAnnee("statistiques-des-jours-des-mariages.txt");
+    vector<int> tab_mariage_jours = litTableauJours("statistiques-des-jours-des-mariages.txt");
     float t=100*31418.0/55342;
-    cout << "Le nombre de total de mariages célébrés entre 2010 et 2015" << endl
-    << "est de " << somme(litTableauAnnee("statistiques-des-jours-des-mariages.txt")) << endl
-    << "Le nombre de mariages célébrés en moyenne par an est de " << moyenne(litTableauAnnee("statistiques-des-jours-des-mariages.txt"))
-    << endl << "L'année où l'on a célébré le plus de mariages est " << 2010+indiceMax(litTableauAnnee("statistiques-des-jours-des-mariages.txt"))
-    << " avec" << endl
-    << litTableauAnnee("statistiques-des-jours-des-mariages.txt")[indiceMax(litTableauAnnee("statistiques-des-jours-des-mariages.txt"))]
-    << " mariages" << endl << "Le jour de la semaine où l'on a célébré le plus de mariages est le "
-    << jours[indiceMax(litTableauJours("statistiques-des-jours-des-mariages.txt"))] << " avec "
-    << litTableauJours("statistiques-des-jours-des-mariages.txt")[indiceMax(litTableauJours("statistiques-des-jours-des-mariages.txt"))]
-    << " mariages" << endl << "Le pourcentage de mariages célébrés le samedi est de "
-    << t << endl;
+    cout << "Le nombre de total de mariages célébrés entre 2010 et 2015" << endl << "est de " << somme(tab_mariage_annee) << endl
+    << "Le nombre de mariages célébrés en moyenne par an est de " << moyenne(tab_mariage_annee) << endl
+    << "L'année où l'on a célébré le plus de mariages est " << 2010+indiceMax(tab_mariage_annee) << " avec" << endl
+    << tab_mariage_annee[indiceMax(tab_mariage_annee)] << " mariages" << endl
+    << "Le jour de la semaine où l'on a célébré le plus de mariages est le " << jours[indiceMax(tab_mariage_jours)] << " avec "
+    << tab_mariage_jours[indiceMax(tab_mariage_jours)] << " mariages" << endl
+    << "Le pourcentage de mariages célébrés le samedi est de " << t << endl;
 }
