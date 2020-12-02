@@ -27,7 +27,6 @@ vector<int> litTableauAnnee(string nom_fichier)
         int year;
         string day;
         int wedding;
-        int total;
         vector<int> t;
         t=vector<int>(6);
         while (registre >> year and registre >> day and registre >> wedding)
@@ -85,7 +84,6 @@ vector<int> litTableauJours(string nom_fichier)
         int year;
         string day;
         int wedding;
-        int total;
         vector<int> t;
         t=vector<int>(jours.size());
         while (registre >> year and registre >> day and registre >> wedding)
