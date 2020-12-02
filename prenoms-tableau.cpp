@@ -23,7 +23,7 @@ vector<vector<string>> tableauTest = {
 void afficheTableau(vector<vector<string>> tableau)
 {
     for(size_t i=0; i<tableau.size(); i++) {
-        for(size_t j=0; j<tableau[1].size(); j++) {
+        for(size_t j=0; j<tableau[i].size(); j++) {
             cout << tableau[i][j] << " ";
         }
         cout << endl;
